@@ -6,7 +6,7 @@
 /*   By: lter-zak <lter-zak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 15:26:30 by lter-zak          #+#    #+#             */
-/*   Updated: 2022/11/16 17:06:12 by lter-zak         ###   ########.fr       */
+/*   Updated: 2022/11/28 15:21:39 by lter-zak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,9 @@ int ft_printxd(unsigned int nb, int base)
 		count += ft_printxd(nb/base,base);
 	n = nb % base;
 	if (base == 16)
-			count += write(1, &hex[nb], 1);
+			count += write(1, &hex[n], 1);
 	if (base == 10)
-			count += write(1, &dec[nb], 1);
+			count += write(1, &dec[n], 1);
 	return (count);
 }
 int printd(int nb)
